@@ -4,8 +4,6 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-
-
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE): # this function will be called when the /start command is issued
     # async def means“This function might take time, don’t freeze everything.”
     await update.message.reply_text("Hello World!") # await means“Wait here until this is done, then move on.”
@@ -19,6 +17,14 @@ async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE):#update = wha
         await update.message.reply_text("Wassup")
     elif text.lower() == "hello":
         await update.message.reply_text("Hey there!")
+    elif text.lower() == "who made you":
+        await update.message.reply_text("I was created by sreevatsa.")
+    elif text.lower() == "who made u":
+        await update.message.reply_text("I was created by sreevatsa.")
+    elif text.lower() == "who made you?":
+        await update.message.reply_text("I was created by sreevatsa.")
+    elif text.lower() == "who made u?":
+        await update.message.reply_text("I was created by sreevatsa.")
     else:
         await update.message.reply_text(text)
 
